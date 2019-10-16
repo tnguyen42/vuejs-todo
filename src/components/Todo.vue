@@ -7,6 +7,9 @@
 				<span class="right floated edit icon" v-on:click="showForm">
 					<i class="edit icon"></i>
 				</span>
+				<span class="right floated trash icon" v-on:click="deleteTodo(todo)">
+					<i class="trash icon"></i>
+				</span>
 			</div>
 		</div>
 		<!-- form is visible when we are in editing mode -->
@@ -26,7 +29,11 @@
 			</div>
 		</div>
 		<div class="ui bottom attached green basic button" v-show="todo.done">Completed</div>
-		<div class="ui bottom attached red basic button" v-show="!todo.done">Complete</div>
+		<div
+			class="ui bottom attached red basic button"
+			v-show="!todo.done"
+			v-on:click="completeTodo(todo)"
+		>Complete</div>
 	</div>
 </template>
 
@@ -44,6 +51,12 @@ export default {
 		},
 		hideForm() {
 			this.isEditing = false;
+		},
+		deleteTodo(todo) {
+			this.$emit("delete-todo", todo);
+		},
+		completeTodo(todo) {
+			this.$emit("complete-todo", todo);
 		}
 	}
 };
