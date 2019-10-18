@@ -42,9 +42,12 @@ export default {
 		};
 	},
 	methods: {
+		/**
+		 * Adds a new todo by pushing it to the array todos. By default, the new todo is set as not-completed.
+		 * @param {string} title The title of the todo
+		 * @param {string} project The project it is associated to
+		 */
 		addTodo(title, project) {
-			// console.log(title);
-			// console.log(project);
 			this.todos.push({
 				title,
 				project,

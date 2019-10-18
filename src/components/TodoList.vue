@@ -20,10 +20,18 @@ export default {
 		Todo
 	},
 	methods: {
+		/**
+		 * Delete the designated todo
+		 * @param {object} todo The todo to be deleted
+		 */
 		deleteTodo(todo) {
 			const todoIndex = this.todos.indexOf(todo);
 			this.todos.splice(todoIndex, 1);
 		},
+		/**
+		 * Mark the designated todo as Completed
+		 * @param {object} todo The todo to be marked as completed
+		 */
 		completeTodo(todo) {
 			const todoIndex = this.todos.indexOf(todo);
 			this.todos[todoIndex].done = true;

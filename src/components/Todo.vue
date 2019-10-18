@@ -46,16 +46,32 @@ export default {
 		};
 	},
 	methods: {
+		/**
+		 * Open the form in the UI
+		 */
 		showForm() {
 			this.isEditing = true;
 		},
+		/**
+		 * Closes the form in the UI
+		 */
 		hideForm() {
 			this.isEditing = false;
 		},
+		/**
+		 * Refers the todo reference to its parent component for deletion
+		 * @param {object} todo The todo to be deleted
+		 */
 		deleteTodo(todo) {
+			console.log(todo);
 			this.$emit("delete-todo", todo);
 		},
+		/**
+		 * Refers the todo reference to its parent component to mark the todo as completed
+		 * @param {object} todo The todo to be marked as completed
+		 */
 		completeTodo(todo) {
+			console.log(todo);
 			this.$emit("complete-todo", todo);
 		}
 	}

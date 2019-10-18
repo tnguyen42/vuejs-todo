@@ -34,12 +34,22 @@ export default {
 		};
 	},
 	methods: {
+		/**
+		 * Open the form in the UI
+		 */
 		openForm() {
 			this.isCreating = true;
 		},
+		/**
+		 * Closes the form in the UI
+		 */
 		closeForm() {
 			this.isCreating = false;
 		},
+		/**
+		 * Submit the form
+		 * Values to be submitted are directly taken from the UI and not passed as argument
+		 */
 		sendForm() {
 			if (this.titleText.length > 0 && this.projectText.length > 0) {
 				const title = this.titleText;
