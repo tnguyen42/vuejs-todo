@@ -14,6 +14,7 @@
 
 <script type = "text/javascript" >
 import Todo from './Todo'
+
 export default {
 	props: ["todos"],
 	components: {
