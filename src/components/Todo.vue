@@ -39,41 +39,41 @@
 
 <script type = "text/javascript" >
 export default {
-	props: ["todo"],
-	data() {
+	props: ['todo'],
+	data () {
 		return {
 			isEditing: false
-		};
+		}
 	},
 	methods: {
 		/**
 		 * Open the form in the UI
 		 */
-		showForm() {
-			this.isEditing = true;
+		showForm () {
+			this.isEditing = true
 		},
 		/**
 		 * Closes the form in the UI
 		 */
-		hideForm() {
-			this.isEditing = false;
+		hideForm () {
+			this.isEditing = false
 		},
 		/**
 		 * Refers the todo reference to its parent component for deletion
 		 * @param {object} todo The todo to be deleted
 		 */
-		deleteTodo(todo) {
-			console.log(todo);
-			this.$emit("delete-todo", todo);
+		deleteTodo (todo) {
+			console.log(todo)
+			this.$emit('delete-todo', todo)
 		},
 		/**
 		 * Refers the todo reference to its parent component to mark the todo as completed
 		 * @param {object} todo The todo to be marked as completed
 		 */
-		completeTodo(todo) {
-			console.log(todo);
-			this.$emit("complete-todo", todo);
+		completeTodo (todo) {
+			console.log(todo)
+			this.$emit('complete-todo', todo)
 		}
 	}
-};
+}
 </script>

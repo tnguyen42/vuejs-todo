@@ -26,7 +26,7 @@
 
 <script>
 export default {
-	data() {
+	data () {
 		return {
 			titleText: "",
 			projectText: "",
@@ -37,20 +37,20 @@ export default {
 		/**
 		 * Open the form in the UI
 		 */
-		openForm() {
+		openForm () {
 			this.isCreating = true;
 		},
 		/**
 		 * Closes the form in the UI
 		 */
-		closeForm() {
+		closeForm () {
 			this.isCreating = false;
 		},
 		/**
 		 * Submit the form
 		 * Values to be submitted are directly taken from the UI and not passed as argument
 		 */
-		sendForm() {
+		sendForm () {
 			if (this.titleText.length > 0 && this.projectText.length > 0) {
 				const title = this.titleText;
 				const project = this.projectText;
